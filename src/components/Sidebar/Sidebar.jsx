@@ -7,7 +7,7 @@ const Sidebar = () => {
   const [extended, setExtended] = useState(false);
 
   const handleMenuIcon = () => {
-    setExtended(!extended);
+    setExtended((prevState) => !prevState);
   };
 
   return (
