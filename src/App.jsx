@@ -1,5 +1,7 @@
+import Sidebar from "./components/Sidebar/Sidebar";
+
 const App = () => {
-  return <div>Enter</div>;
+  return <Sidebar />;
 };
 
 export default App;
