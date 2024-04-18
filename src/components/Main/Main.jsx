@@ -10,8 +10,8 @@ const Main = () => {
     showResult,
     loading,
     resultData,
-    setInputState,
-    inputData,
+    setInput,
+    input,
   } = useContext(Context);
   return (
     <div className="main">
@@ -52,11 +52,16 @@ const Main = () => {
 
         <div className="main-bottom">
           <div className="search-box">
-            <input type="text" placeholder="Enter a prompt here" />
+            <input
+              type="text"
+              value={input}
+              placeholder="Enter a prompt here"
+              onChange={(event) => setInput(event.target.value)}
+            />
             <div>
               <img src={assets.gallery_icon} alt="" />
               <img src={assets.mic_icon} alt="" />
-              <img src={assets.send_icon} alt="" />
+              <img src={assets.send_icon} alt="" onClick={() => onSent()} />
             </div>
           </div>
 
