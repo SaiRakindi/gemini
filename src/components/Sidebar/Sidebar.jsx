@@ -36,7 +36,7 @@ const Sidebar = () => {
                 <div className="recent-entry">
                   <img src={assets.message_icon} alt="" />
 
-                  <p>{prevPrompt}</p>
+                  <p>{prevPrompt.slice(18)}...</p>
                 </div>
               );
             })}
