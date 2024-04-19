@@ -82,6 +82,11 @@ const Main = () => {
               value={input}
               placeholder="Enter a prompt here"
               onChange={(event) => setInput(event.target.value)}
+              onKeyDown={(event) => {
+                if (event.keyCode === 13) {
+                  onSent();
+                }
+              }}
             />
             <div>
               <img src={assets.gallery_icon} alt="" />
